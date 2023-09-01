@@ -133,7 +133,7 @@ li a:hover {
     position: absolute;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 960px) {
     * {
         padding: 0;
         margin: 0;
@@ -141,7 +141,7 @@ li a:hover {
         list-style: none;
         box-sizing: border-box;
     }
-    @media screen and (max-width: 120px) {
+    @media screen and (max-width: 960px) {
         * {
             font-size: 14px;
         }
