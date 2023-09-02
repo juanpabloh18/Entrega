@@ -1,0 +1,303 @@
+:root {
+    --blue: #008080;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+  }
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+
+  }
+  section{
+    padding:2rem 9%;
+
+  }
+  .heading{
+    text-align: center;
+    font-size: 4rem;
+    color:#333;
+    padding:1rem;
+    margin:2rem 0;
+    background: var(--blue);
+  }
+  .heading span{
+    color:#fff;
+  }
+
+  .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background:#333;
+    color: #fff;
+    padding:9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+
+  }
+  .btn:hover{
+    background: var(--blue);
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #008080;
+    padding: 3rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  header.logo {
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+  }
+  header.logo span {
+    color: var(--blue);
+  }
+  header.navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+  }
+  header.navbar a:hover {
+    color: var(--blue);
+  }
+  header #toggler{
+    display:none;
+  }
+   header.fa-bars{
+    font-size:3rem;
+    color:#333;
+    border-radius:.5rem;
+    padding:.5rem 1.5rem;
+    cursor: pointer;
+    border:.1rem solid rgba(0, 0, 0, .1);
+    display:none;
+   }
+
+
+
+
+   /* Modifica el CSS para que insignia y logo-container sean responsive */
+.insignia {
+    max-width: 65%; /* Cambia el valor según el tamaño deseado, en porcentaje o vw */
+    width: 100%; /* Hace que la imagen se ajuste al contenedor */
+    height: auto; /* Mantiene la relación de aspecto original */
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    padding: 1rem; /* Añade un espacio de 1rem desde el borde de la ventana */
+    max-width: 10%; /* Cambia el valor según el tamaño deseado, en porcentaje o vw */
+}
+/* Establece el tamaño y la posición de la imagen "liluzi" */
+.foto {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+    padding: 2rem; /* Añade espacio alrededor de la imagen */
+    background-color: #fff; /* Añade un fondo blanco o del color deseado */
+}
+
+.liluzi {
+    max-width: 150%; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: auto; /* Mantiene la relación de aspecto original */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.home{
+display:flex;
+align-items: center;
+min-height: 100vh;
+background-color: #ffffff;
+background-size: cover;
+background-position: center;
+}
+.home .content{
+  max-width: 50rem;
+}
+.home .content h3{
+  font-size: 6rem;
+  color: #666;
+
+}
+.home .content span{
+  font-size: 3.5rem;
+  color: #333;
+  padding:1rem 0;
+  line-height: 1.5;
+}
+.home .content p{
+  font-size: 1.5rem;
+  color:	#666;
+  padding:1rem 0;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+   @media (max-width:991px) {
+    html {
+      font-size: 55%;
+    }
+    header{
+      padding:2rem;
+    }
+    section{
+      padding:2rem;
+    }
+    .home{
+      background-position: left;
+    }
+    
+   }
+   @media (max-width:768px){
+    header.fa-bars{
+      display:block;
+    }
+    header .navbar{
+      position:absolute;
+      top:100%;left:0;right:0;
+      background:#008080;
+      border-top:.1rem solid rgba(0, 0, 0, .1);
+      clip-path:polygon(0 0, 100% 0, 100% 0, 0 0)
+    }
+    header #toggler:checked ~ .navbar{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a{
+      margin:1.5rem;
+      padding:1.5rem;
+      background:#fff;
+      border:.1rem solid rgba(0,0,0,.1);
+      display:block;
+
+    }
+    .home .content h3{
+      font-size: 5rem;
+    }
+    .home .content span{
+      font-size: 2.5rem;
+    }
+
+    @media (max-width:450px) {
+      html{
+        font-size: 50%;
+      }
+      
+     }
+     .heading{
+      font-size:3rem;
+     }
+     .about.row{
+      display: flex;
+      align-items: center;
+      gap:2rem;
+      flex-wrap:wrap;
+      padding:2rem 0;
+      padding-bottom:3rem;
+     }
+     .about.row.video-container {
+        flex: 1 1 auto; /* Cambia el valor flex para que el contenedor se ajuste automáticamente */
+        display: flex;
+        justify-content: center; /* Centra horizontalmente el contenido */
+        align-items: center; /* Centra verticalmente el contenido */
+        padding: 2rem 0;
+        position: relative;
+    }
+    
+    .about.row.video-container video {
+        max-width: 50%; /* Ajusta el tamaño del video al 100% del ancho del contenedor */
+        height: auto; /* Mantiene la relación de aspecto original */
+        border: 1.5rem solid #fff;
+        border-radius: .5rem;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        object-fit: contain; /* Cambia a 'contain' para que el video se ajuste dentro del contenedor sin recortarse */
+    }
+    .about.row2.video-container2 {
+      flex: 1 1 auto; /* Cambia el valor flex para que el contenedor se ajuste automáticamente */
+      display: flex;
+      justify-content: center; /* Centra horizontalmente el contenido */
+      align-items: center; /* Centra verticalmente el contenido */
+      padding: 2rem 0;
+      position: relative;
+  }
+  
+  .about.row2.video-container2 video {
+      max-width: 50%; /* Ajusta el tamaño del video al 100% del ancho del contenedor */
+      height: auto; /* Mantiene la relación de aspecto original */
+      border: 1.5rem solid #fff;
+      border-radius: .5rem;
+      box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+      object-fit: contain; /* Cambia a 'contain' para que el video se ajuste dentro del contenedor sin recortarse */
+  }
+    
+    .about.row.content p{
+        font-size:1.5rem;
+        color:#9999;
+        padding-top: 1rem;
+        line-height:1.5;
+    }
+    
+     .about.row.content{
+      flex:1 1 40rem;
+     }
+
+     .container-slider {
+      display: flex;
+      overflow: hidden; /* Oculta cualquier desbordamiento horizontal */
+    }
+    
+    .slider {
+      display: flex;
+      width: 300%; /* Ancho total para contener las imágenes */
+      transition: transform 0.3s ease; /* Agrega una transición suave al slider */
+    }
+    
+    .slider-section {
+      flex: 0 0 33.33%; /* Divide el slider en 3 secciones iguales para las 3 imágenes */
+    }
+    
+    .slider-img {
+      max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
+      height: auto; /* Mantiene la relación de aspecto original */
+    }
+    
+   }

@@ -1,0 +1,55 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #008080;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  header.navbar a:hover {
+    color: var(--blue);
+  }
+  header #toggler{
+    display:none;
+  }
+  .modelo1 {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 70vh; /* Ajusta la altura según tus necesidades */
+    max-width: 100%; /* Ajusta el ancho máximo */
+    overflow: hidden; /* Evita desbordamientos */
+  }
+  
+  model-viewer {
+    width: 100%;
+    height: 100%;
+    max-width: 100%; /* Ajusta el ancho máximo */
+  }
+  
+  header.logo {
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+  }
+  header.logo span {
+    color: var(--blue);
+  }
+  .insignia {
+    max-width: 65%; /* Cambia el valor según el tamaño deseado, en porcentaje o vw */
+    width: 100%; /* Hace que la imagen se ajuste al contenedor */
+    height: auto; /* Mantiene la relación de aspecto original */
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    padding: 1rem; /* Añade un espacio de 1rem desde el borde de la ventana */
+    max-width: 10%; /* Cambia el valor según el tamaño deseado, en porcentaje o vw */
+}
